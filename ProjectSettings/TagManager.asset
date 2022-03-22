@@ -18,6 +18,8 @@ TagManager:
   - ScarecrowHat
   - ScarecrowHead
   - FireableArrow
+  - Street
+  - Grass
   layers:
   - Default
   - TransparentFX

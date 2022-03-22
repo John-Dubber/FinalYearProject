@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public enum ControlMode { simple = 1, touch = 2 }
+public enum ControlMode { simple = 1, touch = 2 , vr = 3}
 
 
 public class VehicleControl : MonoBehaviour
@@ -519,6 +519,11 @@ public class VehicleControl : MonoBehaviour
                 if (accelFwd != 0) { accel = accelFwd; } else { accel = accelBack; }
                 steer = Mathf.MoveTowards(steer, steerAmount, 0.07f);
 
+            }
+            else if(controlMode == ControlMode.vr)
+            {
+                steer = Mathf.MoveTowards(steer, 1 ,0.2f);
+                
             }
 
         }
